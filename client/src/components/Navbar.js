@@ -8,7 +8,7 @@ function Navbar() {
           <div className="flex justify-between">
             <div>
               <a className="flex items-center py-4 px-2">
-                <img src="comZoneLogo.png" className="h-10 w-10 mr-2" />
+                <img src="./public/comfortZoe.png" className="h-10 w-10 mr-2" />
                 <span className="font-bold hover:text-gray-800 text-lg">
                   Comfort Zone
                 </span>
@@ -50,6 +50,8 @@ function Navbar() {
 
           </div>      
         </div>
+        
+        {/*Mobile menu */}
         <div className="hidden mobile-menu">
           <ul>
             <li>
