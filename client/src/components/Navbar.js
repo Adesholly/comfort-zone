@@ -7,8 +7,8 @@ function Navbar() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between">
             <div>
-              <a className="flex items-center py-4 px-2">
-                <img src="./public/comfortZoe.png" className="h-10 w-10 mr-2" />
+              <a href="" className="flex items-center py-4 px-2">
+                <img src='' className="h-12 w-12 mr-2" />
                 <span className="font-bold hover:text-gray-800 text-lg">
                   Comfort Zone
                 </span>
@@ -30,7 +30,7 @@ function Navbar() {
               </a>
             </div>
 
-            {/*  Mobile menu button */}
+            {/* Mobile menu button */}
             <div className="sm:hidden flex items-center">
               <button className="outline-none mobile-menu-button">
                 <svg
@@ -51,7 +51,7 @@ function Navbar() {
           </div>      
         </div>
         
-        {/*Mobile menu */}
+        {/* Mobile menu */}
         <div className="hidden mobile-menu">
           <ul>
             <li>
