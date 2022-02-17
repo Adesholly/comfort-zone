@@ -1,64 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Navbar() {
+  const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <div>
-      <nav className="bg-white shadow-lg">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex justify-between">
-            <div>
-              <a href="" className="flex items-center py-4 px-2">
-                <img src='' className="h-12 w-12 mr-2" />
-                <span className="font-bold hover:text-gray-800 text-lg">
-                  Comfort Zone
-                </span>
-              </a>
-            </div>
+      <nav className="relative flex flex-wrap  items-center justify-between px-2 py-3 bg-white shadow-lg mb-3 ">
+        <div className="container px-4 mx-auto flex flex-wrap justify-between items-center">
+          <div className="w-full relative flex justify-between lg:w-auto lg-static lg:block lg:justify-start">
+            <a
+              className="text-lg font-bold leading-relaxed inline-block mr-4 py-2 px-14 whitespace-nowrap uppercase"
+              href="#"
+            >
+              <img src="" alt="" />
+              Comfort  zone
+            </a>
+            <button
+              className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outlinnone focus:outline-none"
+              type="button"
+              onClick={() => setNavbarOpen(!navbarOpen)}
+            >
+              <div class="p-2 space-y-2 ">
+                <span class="block w-7 h-0.5 bg-gray-600 animate-pulse"></span>
+                <span class="block w-7 h-0.5 bg-gray-600 animate-pulse"></span>
+                <span class="block w-6 h-0.5 bg-gray-700 animate-pulse"></span>
+              </div>
+            </button>
 
-            <div className="hidden sm:flex items-center space-x-1">
-              <a
-                href=""
-                className="py-2 px-2 font-medium text-gray-500 hover:text-gray-800"
-              >
-                Log In
-              </a>
-              <a
-                href=""
-                className="py-2 px-2 font-medium text-gray-500  hover:text-gray-800 hover:f ont-semibold"
-              >
-                Register
-              </a>
-            </div>
+          </div>
+          <div className={"lg:flex flex-grow items-center" + (navbarOpen ? " flex" : " hidden")} id="myNavbar">
+            <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+              <li className="nav-item">
+                <a className="lg:px-3 px-14 py-2 flex items-center font-bold leading-snug hover:opacity-75" href="#">
+                  Register
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="lg:px-3 px-14 py-2 flex items-center font-bold leading-snug hover:opacity-75" href="#">
+                  Login
+                </a>
+              </li>
+            </ul>
 
-            {/* Mobile menu button */}
-            <div className="sm:hidden flex items-center">
-              <button className="outline-none mobile-menu-button">
-                <svg
-                className="w-6 h-6 text-gray-800"
-                x-show="!showMenu"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                  <path d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-              </button>
-            </div>
-
-          </div>      
-        </div>
-        
-        {/* Mobile menu */}
-        <div className="hidden mobile-menu">
-          <ul>
-            <li>
-              <a></a>
-            </li>
-          </ul>
-
+          </div>
         </div>
       </nav>
     </div>
