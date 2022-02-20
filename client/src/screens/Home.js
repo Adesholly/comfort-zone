@@ -2,19 +2,19 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Room from "../components/Room";
 
-function Homescreen() {
+function Home() {
   
 
   const [rooms, setRooms] = useState([]);
   const [loading, setLoading] = useState();
   const [error, setError] = useState();
 
-  useEffect( async () => {
+  useEffect( async() => {
 
     try {
       
       setLoading(true);  
-      const data = (await axios.get("/api/rooms/getallrooms")).data;
+      const data = ( await axios.get("/api/rooms/getallrooms")).data;
 
       setRooms(data);
       setLoading(false);
@@ -41,4 +41,4 @@ function Homescreen() {
   );
 }
 
-export default Homescreen;
+export default Home;

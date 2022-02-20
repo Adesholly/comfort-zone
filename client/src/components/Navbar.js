@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  
   return (
     <div>
       <nav className="relative flex flex-wrap  items-center justify-between px-2 py-3 bg-white shadow-lg mb-3 ">
@@ -19,10 +20,10 @@ function Navbar() {
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              <div class="p-2 space-y-2 ">
-                <span class="block w-7 h-0.5 bg-gray-600 animate-pulse"></span>
-                <span class="block w-7 h-0.5 bg-gray-600 animate-pulse"></span>
-                <span class="block w-6 h-0.5 bg-gray-700 animate-pulse"></span>
+              <div className="p-2 space-y-2 ">
+                <span className="block w-7 h-0.5 bg-gray-600 animate-pulse"></span>
+                <span className="block w-7 h-0.5 bg-gray-600 animate-pulse"></span>
+                <span className="block w-6 h-0.5 bg-gray-700 animate-pulse"></span>
               </div>
             </button>
 
