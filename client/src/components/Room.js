@@ -68,7 +68,7 @@ function Room({room}) {
 
 
 
-          <Link to={`/book/${room._id}`}>
+          <Link to={`/book/${room.name}`}>
           <button  className="float-right bg-gray-600 text-white active:bg-gray-800 font-bold text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mx-2 mb-1 ease-linear transition-all duration-150">Book</button>
           </Link>
 

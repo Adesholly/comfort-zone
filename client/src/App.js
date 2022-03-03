@@ -11,11 +11,11 @@ function App() {
       <Navbar/>
       <BrowserRouter>      
         <Routes>
-          <Route path='/home' element={<Home/>} />
+          <Route path='/home' element={<Home />} />
 
           
           
-          <Route path='/book/:roomid' element={<Booking />} />
+          <Route path='/book/:name' element={<Booking />} />
          
         </Routes>
     
